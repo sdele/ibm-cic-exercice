@@ -1,0 +1,5 @@
+<!--  On parcourt les utilisateurs et pour chacun on affiche les données JSON -->
+<div *ngFor="let user of data.results">
+  <div> {{ user | json}} </div>
+  <br /><br />
+</div>
