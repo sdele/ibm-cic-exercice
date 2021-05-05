@@ -1,5 +1,5 @@
 <!--  On parcourt les utilisateurs et pour chacun on affiche les données JSON -->
 <div *ngFor="let user of data.results">
-  <div> {{ user | json}} </div>
+  <app-user-profile [user]="user" (deleteEvent)="deleteUser($event)"></app-user-profile>
   <br /><br />
 </div>

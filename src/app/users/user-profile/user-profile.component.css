@@ -1,0 +1,21 @@
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-infos, .user-delete {
+  margin: 5px;
+}
+
+.user-picture-male {
+  border: dodgerblue solid 2px;
+}
+
+.user-picture-female {
+  border: deeppink solid 2px;
+}
+
+img {
+  display: block;
+}

@@ -1,0 +1,18 @@
+
+<div appHover class="user-profile">
+  <div class="user-infos">
+    <p>
+      Profil de {{user.name.first}} {{user.name.last}}
+      <span *ngIf="user.dob.age >= 60">(senior)</span>
+    </p>
+    <p>né(e) le {{user.dob.date}} ({{user.dob.age}} ans)</p>
+    <p>contact: {{user.email}}</p>
+  </div>
+  <div [class]="user.gender === 'male' ? 'user-picture-male' : 'user-picture-female'">
+    <img [src]="user.picture.medium">
+  </div>
+  <div class="user-delete">
+    <!-- On écoute l'evenement clic du bouton pour appeler la méthode sendSeed -->
+    <button (click)="sendSeed()">Supprimer</button>
+  </div>
+</div>
