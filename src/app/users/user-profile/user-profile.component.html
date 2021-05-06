@@ -5,8 +5,9 @@
       Profil de {{user.name.first}} {{user.name.last}}
       <span *ngIf="user.dob.age >= 60">(senior)</span>
     </p>
-    <p>né(e) le {{user.dob.date}} ({{user.dob.age}} ans)</p>
-    <p>contact: {{user.email}}</p>
+    <!-- see angular doc for date pipe https://angular.io/api/common/DatePipe -->
+    <p>né(e) le {{user.dob.date | date:'dd/MM/yyyy'}} ({{user.dob.age}} ans)</p>
+    <p>contact: {{user.email | email:'de' | uppercase}}</p>
   </div>
   <div [class]="user.gender === 'male' ? 'user-picture-male' : 'user-picture-female'">
     <img [src]="user.picture.medium">
